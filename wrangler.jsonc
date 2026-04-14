@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "eglaptop26",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "eglaptop",
+          "database_id": "1c0e2e32-9188-424a-b70d-f894f46d53b7"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "56f7da7633b64b01bf3816fb5785062c",
+            "binding": "SECRET",
+            "secret_name": "eglaptop"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
